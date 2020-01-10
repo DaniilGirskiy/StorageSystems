@@ -6,4 +6,22 @@
 //  Copyright © 2020 Daniil Girskiy. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol ProductPriceControllerInput {
+    var output: ProductPriceControllerOutput? { get set }
+}
+
+protocol ProductPriceControllerOutput {
+    func getPrice(_ price: String)
+}
+
+class ProductPriceController: UIViewController, ProductPriceControllerInput {
+    var output: ProductPriceControllerOutput?
+    
+    @IBOutlet weak var priceTextField: UITextField!
+    @IBAction func next() {
+        output?.getPrice(priceTextField.text!)     // в какой момент времени нужно проверить, что у price тип Float?
+    }
+    
+}

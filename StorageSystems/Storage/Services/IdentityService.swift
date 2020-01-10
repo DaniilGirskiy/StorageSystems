@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+enum Service {
+    case enterProductInformation
+    case scanProduct
+}
+
+protocol IdentityService {
+    func chooseService() -> Service?
+}
+
+class IdentityServiceImpl: IdentityService {
+    func chooseService() -> Service? {
+        //return .enterProductInformation
+        return .scanProduct
+    }
+}

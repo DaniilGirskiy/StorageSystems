@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+protocol StorageService {
+    func uploadProductInformationToStorage(info: ProductInformation)
+}
+
+class StorageServiceImpl: StorageService {
+    func uploadProductInformationToStorage(info: ProductInformation) {
+        print("загрузка данных о товаре")
+    }
+}

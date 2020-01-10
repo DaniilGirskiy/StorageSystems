@@ -6,4 +6,23 @@
 //  Copyright © 2020 Daniil Girskiy. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol ProductTitleControllerInput {
+    var output: ProductTitleControllerOutput? { get set }
+}
+
+protocol ProductTitleControllerOutput {
+    func getTitle(_ title: String)
+}
+
+class ProductTitleController: UIViewController, ProductTitleControllerInput {
+    var output: ProductTitleControllerOutput?
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBAction func next() {
+        output?.getTitle(titleTextField.text!)
+    }
+}
+
+

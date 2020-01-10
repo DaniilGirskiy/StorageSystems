@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct ProductInformation {
+    var title: String?
+    var id: String?
+    var price: Float?
+}
