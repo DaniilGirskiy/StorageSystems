@@ -54,6 +54,8 @@ class StorageCoordinator {
     
     
     func start() {
+        
+        
         if identityService?.chooseService() == .enterProductInformation {                       // ?????????????
             let prodInfoStartVC = vc("ProductTitleController") as! ProductTitleController       // ?????????????
             prodInfoStartVC.output = self                                                       // ?????????????
@@ -65,6 +67,8 @@ class StorageCoordinator {
             window?.rootViewController = scanStartVC
             self.scanStartVC = scanStartVC
         }
+        
+        window?.makeKeyAndVisible()
     }
 }
 
@@ -126,6 +130,17 @@ extension StorageCoordinator: ScanStartControllerOutput {
 }
 
 extension StorageCoordinator: ScanFinishControllerOutput {
+    var qrCode: String? {
+        get {
+            return ""
+        }
+        set {
+            
+        }
+    }
+    
+   
+    
  
 }
 

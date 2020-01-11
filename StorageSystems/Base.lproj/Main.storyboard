@@ -92,7 +92,7 @@
                                 <rect key="frame" x="146.5" y="751" width="121" height="30"/>
                                 <state key="normal" title="Confirm QR Code"/>
                                 <connections>
-                                    <action selector="next:" destination="An6-Zu-cs0" eventType="touchUpInside" id="qtx-gt-CcR"/>
+                                    <action selector="next" destination="An6-Zu-cs0" eventType="touchUpInside" id="VKs-Do-jQf"/>
                                 </connections>
                             </button>
                         </subviews>

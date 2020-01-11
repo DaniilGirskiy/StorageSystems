@@ -13,7 +13,7 @@ protocol ScanFinishControllerInput {
 }
 
 protocol ScanFinishControllerOutput {
-    func completeFlow()
+    var qrCode: String? { get set }
 }
 
 class ScanFinishController: UIViewController, ScanFinishControllerInput {
@@ -22,7 +22,7 @@ class ScanFinishController: UIViewController, ScanFinishControllerInput {
     @IBOutlet weak var scannedCodeLabel: UILabel!
     
     @IBAction func send() {
-        output?.completeFlow()
+        output?.qrCode
     }
     
     
